@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import ThemeContextProvider from "@/components/ThemeContextProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,12 +19,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <StairTransition />
-        <PageTransition>{children}</PageTransition>
-      </body>
-    </html>
+    <ThemeContextProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <Header />
+          <StairTransition />
+          <PageTransition>{children}</PageTransition>
+        </body>
+      </html>
+    </ThemeContextProvider>
   );
 }

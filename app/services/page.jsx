@@ -60,13 +60,13 @@ const Services = () => {
                   </div>
                   <Link
                     href={service.href}
-                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent-light dark:group-hover:bg-accent-dark transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                   >
-                    <BsArrowDownRight className="text-primary text-3xl" />
+                    <BsArrowDownRight className="text-text-light dark:text-text-dark text-3xl" />
                   </Link>
                 </div>
                 {/* title */}
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent-light dark:group-hover:text-accent-dark transition-all duration-500">
                   {service.title}
                 </h2>
                 {/* desc */}

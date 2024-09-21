@@ -81,7 +81,7 @@ const Work = () => {
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent-light dark:group-hover:text-accent-dark transition-all duration-500 capitalize">
                 {project.category} project
               </h2>
               {/* project description */}
@@ -90,7 +90,10 @@ const Work = () => {
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-accent">
+                    <li
+                      key={index}
+                      className="text-xl text-accent-light dark:text-accent-dark"
+                    >
                       {item.name}
                       {index !== project.stack.length - 1 && ","}
                     </li>
@@ -106,7 +109,7 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent-light dark:group-hover:text-accent-dark" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Live project</p>
@@ -119,7 +122,7 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                        <BsGithub className="text-white text-3xl group-hover:text-accent-light dark:group-hover:text-accent-dark" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Github repository</p>
@@ -159,7 +162,7 @@ const Work = () => {
               {/* slider buttons */}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-accent-light dark:bg-accent-dark hover:bg-accent-light-hover dark:hover:bg-accent-dark-hover text-text-light dark:text-text-dark text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
               />
             </Swiper>
           </div>
