@@ -174,8 +174,10 @@ const Cv = () => {
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <h3 className="text-4xl font-bold text-text-light dark:text-text-dark">
+                  {experience.title}
+                </h3>
+                <p className="max-w-[600px] text-text-light/60 dark:text-text-dark/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -184,18 +186,20 @@ const Cv = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-secondary-light dark:bg-secondary-dark h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent-light dark:text-accent-dark">
                             {item.duration}
                           </span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left text-text-light dark:text-text-dark">
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent-light dark:bg-accent-dark"></span>
-                            <p className="text-white/60">{item.company}</p>
+                            <p className="text-text-light/60 dark:text-text-dark/60">
+                              {item.company}
+                            </p>
                           </div>
                         </li>
                       );
@@ -208,7 +212,7 @@ const Cv = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-text-light/60 dark:text-text-dark/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -217,7 +221,7 @@ const Cv = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-secondary-light dark:bg-secondary-dark h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent-light dark:text-accent-dark">
                             {item.duration}
@@ -228,7 +232,9 @@ const Cv = () => {
                           <div className="flex items-center gap-3">
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent-light dark:bg-accent-dark"></span>
-                            <p className="text-white/60">{item.institution}</p>
+                            <p className="text-text-light/60 dark:text-text-dark/60">
+                              {item.institution}
+                            </p>
                           </div>
                         </li>
                       );
@@ -242,7 +248,7 @@ const Cv = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-text-light/60 dark:text-text-dark/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
@@ -252,7 +258,7 @@ const Cv = () => {
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                            <TooltipTrigger className="w-full h-[150px] bg-secondary-light dark:bg-secondary-dark rounded-xl flex justify-center items-center group">
                               <div className="text-6xl group-hover:text-accent-light dark:group-hover:text-accent-dark transition-all duration-300">
                                 {skill.icon}
                               </div>
@@ -275,7 +281,7 @@ const Cv = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-text-light/60 dark:text-text-dark/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
@@ -285,7 +291,9 @@ const Cv = () => {
                         key={index}
                         className="flex items-center justify-center xl:justify-start gap-4"
                       >
-                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-text-light/60 dark:text-text-dark/60">
+                          {item.fieldName}
+                        </span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
                     );

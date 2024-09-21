@@ -27,16 +27,16 @@ module.exports = {
         },
         secondary: {
           light: '#E0E0E0', // Soft Gray
-          dark: '2E2E38', // Dark Gray
+          dark: '#2E2E38', // Dark Gray
         },
         accent: {
           light: {
             DEFAULT: '#D4AF37', // Gold
-            hover: '#E0E000',
+            hover: '#B99727',
           },
           dark: {
             DEFAULT: '#800020', // Burugundy
-            hover: '#E0E000', 
+            hover: '#660019', 
             },
         },
         text: {
@@ -47,6 +47,16 @@ module.exports = {
           light: '#FAFAFA', // Off-white 
           dark: '#121212',  // Very Dark Gray
         },
+        outline: {
+          light: {
+            DEFAULT: '#ffffff',
+            hover: '#F7FF00',
+          },
+          dark: {
+            DEFAULT: '#ffffff',
+            hover: '#F7FF00'
+          }
+        }
       },
 
       keyframes: {

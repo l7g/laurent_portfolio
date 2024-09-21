@@ -55,24 +55,26 @@ const Services = () => {
                 className="flex-1 flex flex-col justify-center gap-6 group"
               >
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                  <div className="text-5xl font-extrabold text-outline-light dark:text-outline-dark group-hover:text-outline-light-hover dark:group-hover:text-outline-dark-hover text-transparent dark:text-transparent group-hover:text-transparent dark:group-hover:text-transparent transition-all duration-500">
                     {service.num}
                   </div>
                   <Link
                     href={service.href}
-                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent-light dark:group-hover:bg-accent-dark transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                    className="w-[70px] h-[70px] rounded-full bg-secondary-light dark:bg-secondary-dark group-hover:bg-accent-light dark:group-hover:bg-accent-dark transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                   >
-                    <BsArrowDownRight className="text-text-light dark:text-text-dark text-3xl" />
+                    <BsArrowDownRight className="text-text-light dark:text-accent-dark dark:group-hover:text-text-dark text-3xl" />
                   </Link>
                 </div>
                 {/* title */}
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent-light dark:group-hover:text-accent-dark transition-all duration-500">
+                <h2 className="text-[42px] font-bold leading-none text-text-light dark:text-text-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-all duration-500">
                   {service.title}
                 </h2>
                 {/* desc */}
-                <p className="text-white/60">{service.description}</p>
+                <p className="text-text-light/60 dark:text-text-dark/60">
+                  {service.description}
+                </p>
                 {/* border */}
-                <div className="border-b border-white/20 w-full"></div>
+                <div className="border-b border-primary-light/40 dark:border-secondary-dark/80 w-full"></div>
               </div>
             );
           })}

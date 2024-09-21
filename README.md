@@ -3,3 +3,5 @@ I used the video to refresh my skills while learning tailwind, on a side project
 I used the video to have a solid base from where to start and create my own portfolio.
 
 I do not intend to use this website for job search purposes, but solely as a good start point.
+
+As of 21st september, I'm starting to improve personalization and differing from the video.

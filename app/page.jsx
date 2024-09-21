@@ -20,7 +20,7 @@ const Home = () => {
                 Laurent Gagné
               </span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] mb-9 text-text-light/80 dark:text-text-dark/80">
               I excel at crafting elegant digital experiences and I am
               proficient in various programming languages and technologies.
             </p>

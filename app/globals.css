@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply bg-primary-light dark:bg-primary-dark text-white leading-loose;
+        @apply bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark leading-loose;
     }
     .h1 {
         @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -15,11 +15,17 @@
     .h3 {
         @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
     }
-    .text-outline {
-    -webkit-text-stroke: 1px #ffffff;
+    .text-outline-light {
+        -webkit-text-stroke: 1px #333333;
     }
-    .text-outline-hover {
-    -webkit-text-stroke: 1px #F7FF00;
+    .text-outline-light-hover {
+        -webkit-text-stroke: 1px #D4AF37;
+    }
+    .text-outline-dark {
+        -webkit-text-stroke: 1px #EAEAEA;
+    }
+    .text-outline-dark-hover {
+        -webkit-text-stroke: 1px #800020;
     }
 }
 

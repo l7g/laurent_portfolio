@@ -77,15 +77,17 @@ const Work = () => {
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+              <div className="text-8xl leading-none font-extrabold text-transparent text-outline-light dark:text-outline-dark dark:text-transparent">
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent-light dark:group-hover:text-accent-dark transition-all duration-500 capitalize">
+              <h2 className="text-[42px] font-bold leading-none text-text-light dark:text-text-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-all duration-500 capitalize">
                 {project.category} project
               </h2>
               {/* project description */}
-              <p className="text-white/60">{project.description}</p>
+              <p className="text-text-light/60 dark:text-text-dark/60">
+                {project.description}
+              </p>
               {/* stock */}
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
@@ -101,15 +103,15 @@ const Work = () => {
                 })}
               </ul>
               {/* border */}
-              <div className="border border-white/20"></div>
+              <div className="border border-primary-light/40 dark:border-secondary-dark/40"></div>
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* Live project button */}
                 <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent-light dark:group-hover:text-accent-dark" />
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-secondary-light/60 dark:bg-secondary-dark/60 flex justify-center items-center group">
+                        <BsArrowUpRight className="text-text-light dark:text-text-dark text-3xl group-hover:text-accent-light dark:group-hover:text-accent-dark" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Live project</p>
@@ -121,8 +123,8 @@ const Work = () => {
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent-light dark:group-hover:text-accent-dark" />
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-secondary-light/60 dark:bg-secondary-dark/60 flex justify-center items-center group">
+                        <BsGithub className="text-text-light dark:text-text-dark text-3xl group-hover:text-accent-light dark:group-hover:text-accent-dark" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Github repository</p>

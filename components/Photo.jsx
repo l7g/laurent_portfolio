@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "@/tailwind.config";
+import { useTheme } from "./ThemeContextProvider";
 
 const Photo = () => {
+  const fullConfig = resolveConfig(tailwindConfig);
+  const { theme, toggleTheme } = useTheme();
   return (
     <div className="w-full h-full relative">
       <motion.div
@@ -26,6 +31,7 @@ const Photo = () => {
             src="/assets/LaurentPic.png"
             priority
             quality={100}
+            sizes="100%"
             fill
             alt=""
             className="object-contain"
@@ -43,7 +49,11 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#F7FF00"
+            stroke={
+              theme === "light"
+                ? `${fullConfig.theme.colors.accent.light.DEFAULT}`
+                : `${fullConfig.theme.colors.accent.dark.DEFAULT}`
+            }
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
