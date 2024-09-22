@@ -2,16 +2,14 @@
 
 import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "./ThemeContextProvider";
+import { Button } from "./ui/button";
 
 const ThemeButton = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <button
-      className="p-4 rounded-md bg-accent-light dark:bg-accent-dark text-text-light dark:text-text-dark"
-      onClick={toggleTheme}
-    >
+    <Button variant="secondary" onClick={toggleTheme}>
       {theme === "light" ? <FiMoon /> : <FiSun />}
-    </button>
+    </Button>
   );
 };
 

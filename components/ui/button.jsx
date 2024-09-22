@@ -12,6 +12,8 @@ const buttonVariants = cva(
         default:
           "bg-accent-light dark:bg-accent-dark text-text-light dark:text-text-dark hover:bg-accent-light-hover dark:hover:bg-accent-dark-hover",
         primary: "bg-primary-light dark:bg-primary-dark text-white",
+        secondary:
+          "bg-secondary-light dark:bg-secondary-dark text-text-light dark:text-text-dark",
         outline:
           "border border-accent-light dark:border-accent-dark bg-transparent text-accent-light dark:text-accent-dark hover:bg-accent-light dark:hover:bg-accent-dark hover:text-text-light dark:hover:text-text-dark",
       },
