@@ -5,6 +5,7 @@ import { FiDownload } from "react-icons/fi";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import DownloadButton from "@/components/DownloadButton";
 
 const Home = () => {
   return (
@@ -13,7 +14,9 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl ">Software Developer</span>
+            <span className="text-xl ">
+              Fullstack Developer | European Studies Student
+            </span>
             <h1 className="h1 mb-6">
               Hello I'm <br />{" "}
               <span className="text-accent-light dark:text-accent-dark">
@@ -23,17 +26,13 @@ const Home = () => {
             <p className="max-w-[500px] mb-9 text-text-light/80 dark:text-text-dark/80">
               I excel at crafting elegant digital experiences and I am
               proficient in various programming languages and technologies.
+              <br /> I also excel in analytical thinking and problem solving,
+              skills gained through a thorough study of European history and
+              politics.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <DownloadButton />
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
@@ -44,7 +43,7 @@ const Home = () => {
           </div>
           {/* photo */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
-            <Photo />
+            {/*  <Photo /> */}
           </div>
         </div>
       </div>
