@@ -61,9 +61,10 @@ const MobileNav = () => {
                 {link.name}
               </Link>
             );
+            1;
           })}
+          <ThemeButton />
         </nav>
-        <ThemeButton />
       </SheetContent>
     </Sheet>
   );

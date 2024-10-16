@@ -35,6 +35,7 @@ const services = [
 ];
 
 import { motion } from "framer-motion";
+import WorkInProgress from "@/components/WorkInProgress";
 
 const Services = () => {
   return (
@@ -74,7 +75,7 @@ const Services = () => {
                   {service.description}
                 </p>
                 {/* border */}
-                <div className="border-b border-primary-light/40 dark:border-secondary-dark/80 w-full"></div>
+                <div className="border-b border-primary-light/40 dark:border-secondary-dark/40 w-full"></div>
               </div>
             );
           })}
